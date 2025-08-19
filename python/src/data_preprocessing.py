@@ -24,7 +24,10 @@ raw_data = pd.DataFrame(historical_data)
 def include_indexcol(data):
     """
 
-    'Date' is originally an index in yfinance. Add 'Date' as a column for uses down the line.
+    'Date' is originally an index in yfinance. 
+    
+    
+    Return:'Date' as a column for uses down the line.
 
     Alternatively use build-in one-liner
     # raw_data = raw_data_without_datecol.reset_index()
@@ -42,17 +45,18 @@ def include_indexcol(data):
     raw_data = pd.DataFrame(date_dict)
     return raw_data
 
-# get dates and close columns only 
+# get date of dates and close columns only 
 dates_and_close_data = include_indexcol(raw_data)[['Date', 'Close']] 
-print(dates_and_close_data)
 
-# def calc_log_returns(prev_price, present_price, log_return):
-#     """
-#     Calculates log of returns from previous price to next-day prie 
-#     F(t) = log(P(t)/P(t-1))
+def calc_log_returns(prev_price, present_price, log_return):
+    """
+    Calculates log of returns from previous price to next-day prie 
+    F(t) = log(P(t)/P(t-1))
+    """
 
-#     """
-    # return log_return
+
+
+    return log_return
 
 # pull Date and Close columns
 
@@ -74,6 +78,8 @@ print(dates_and_close_data)
 # # plot and visualize the prices 
 
 # # Error-handling
+
+# def final_tree()
 
 # def main():
 #     args = sys.argv[1:]
