@@ -21,4 +21,3 @@ always @(*)begin
     else
     same_res = 0;
 end module
-    
