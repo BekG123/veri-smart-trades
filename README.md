@@ -27,9 +27,10 @@ Stanford University, Class of 2027
 Project: XGBoost For Ultra-Low Latency Trading 
 
 Major problem: Machine Learning/Deep Learning with Python is slow given that it is one of the slowest compiled languages but with modern 
-learning methods, it is becoming most useful for its simplicity to implement. XGBoost is one algo-example. 
+learning methods, it is becoming most useful for its simplicity to implement. Parallelism is king for learning methods. XGBoost is one algo-example. 
 
-Solution: I implement XGBoost learning in Python and do the rest of the inferencing on a simple FPGA. This predicts and executes trades decisions much faster(hypoth.)  
+Solution: I implement XGBoost learning in Python and do the rest of the inferencing on an FPGA. This predicts and executes trades decisions much faster(hypoth.)  
+because of the low latency of FPGAs and its parallel nature. 
 
 July 2025 - Present 
 
@@ -39,11 +40,15 @@ Python
 
 Verilog/SystemVerilog
 
-GoBoard FPGA 
+GoBoard FPGA + EDAPlayground(Prototype Stage) - current
+
+Xilinx XUP Virtex-II + ModelSim (Implenetation Stage)
 
 ## Getting Started 
 
+More information to come. 
 
 ## Contact 
 
+Email: b343m79@stanford.edu
 

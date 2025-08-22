@@ -82,7 +82,7 @@ dates_onlycol = dates_and_close_data.drop(columns=['Close'])
 # now join the log returns column to our data with 'dates' and group according to weeks
 dates_and_log_ret = dates_onlycol.join(calc_log_returns()).dropna()
 
-# pull out days 2 through 5 as a test and add the log returns 
+# pull out days 2 through 5 as a test and add the log returns; foreshadow to summing every 5 day periods per week 
 data_test = dates_and_log_ret.iloc[1:5]
 data_sum = data_test['Log Returns'].sum()
 # group by weekly intervals for past 30-60 days and using sum of the daily returns every 5 days 
