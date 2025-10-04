@@ -10,6 +10,10 @@ import sys
 
 # Put code in OOP class StockPreprocessData
 
+# class StockPreprocessData
+
+#     def _init_(self):
+
 # initiate ompany name as user input
 ticker_symbol = 'AAPL' # str(input(" Enter TICKER: "))
 
@@ -98,7 +102,7 @@ grouped_data = dates_and_log_ret['Log Returns'].groupby(dates_and_log_ret.index 
 print(dates_and_log_ret)
 
 # Append a column that will have corresponding name of date next to the date itself 
-def assign_name_to_datecol():
+def assign_dayname_to_datecol():
     """
 
     Passes a date and identifies the name of the day.  
@@ -106,12 +110,14 @@ def assign_name_to_datecol():
     """
     # call the column day 
     # pull out the dates of the previous data frame; try with last date first '2025-08etc'
-    dates = dates_and_log_ret['Date'].dt.day_name()
+    days = dates_and_log_ret['Date'].dt.day_name().rename('Day')
     # iteratively pass them into this function 
-    date_day_logret = pd.concat([dates, dates_and_log_ret], axis=1)
+    date_day_logret = pd.concat([days, dates_and_log_ret], axis=1)
     return date_day_logret
     # convert the results into a panda Series and add it to the previous data frame 
-print(assign_name_to_datecol())
+print(assign_dayname_to_datecol())
+
+# Now use if statements to identify the specific days 
 
 
 

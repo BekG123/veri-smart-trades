@@ -42,7 +42,7 @@ Verilog/SystemVerilog
 
 GoBoard FPGA + EDAPlayground(Prototype Stage) - current
 
-Xilinx XUP Virtex-II + ModelSim (Implenetation Stage)
+Xilinx XUP Virtex-II + ModelSim (Implemtation Stage)
 
 ## Getting Started 
 
